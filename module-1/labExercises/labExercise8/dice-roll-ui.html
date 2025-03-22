@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>devsInc Dice Roll</title>
+    <script src="dice-roll.js"></script>
+  </head>
+
+  <body>
+    <h1>Dice Roll Simulation</h1>
+    <label
+      >Input # Dice Sides
+      <input
+        type="number"
+        id="numSides"
+        name="numSides"
+        value="6"
+        min="6"
+        max="10"
+      />
+    </label>
+    <button onclick="rollDiceAndUpdate()">Roll Dice</button>
+    <div id="dice-result"></div>
+  </body>
+</html>
