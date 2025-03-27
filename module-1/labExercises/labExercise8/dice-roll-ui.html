@@ -3,22 +3,25 @@
   <head>
     <title>devsInc Dice Roll</title>
     <script src="dice-roll.js"></script>
+    <link rel="stylesheet" href="dice-roll-styling.css" />
   </head>
 
   <body>
-    <h1>Dice Roll Simulation</h1>
-    <label
-      >Input # Dice Sides
-      <input
-        type="number"
-        id="numSides"
-        name="numSides"
-        value="6"
-        min="6"
-        max="10"
-      />
-    </label>
-    <button onclick="rollDiceAndUpdate()">Roll Dice</button>
+    <div class="container">
+      <h1 class="header">devsInc Dice Roll</h1>
+      <label
+        >Input # Dice Sides
+        <input
+          type="number"
+          id="numSides"
+          name="numSides"
+          value="6"
+          min="6"
+          max="20"
+        />
+      </label>
+      <button onclick="rollDiceAndUpdate()">Roll Dice</button>
+    </div>
     <div id="dice-result"></div>
   </body>
 </html>
