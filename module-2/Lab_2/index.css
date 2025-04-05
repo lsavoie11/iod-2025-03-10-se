@@ -1,0 +1,124 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.style-me1 {
+  color: red;
+}
+
+#style-me2 {
+  color: blue;
+}
+
+#style-me2,
+.style-me1 {
+  color: purple;
+}
+/* Put styles for questions 2.1 and 2.2 here */
+.my-descendants-are-styled p {
+  background-color: red;
+}
+.my-children-are-styled > p {
+  background-color: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+.box {
+  background-color: lightcoral;
+  margin: 16px 8px 4px 10px;
+  padding: 10px 20px 30px 40px;
+  width: 20rem;
+  height: 8rem !important;
+  border: 10px solid maroon;
+  box-sizing: content-box;
+  overflow: scroll;
+  outline: 10px solid black;
+  border-radius: 4rem;
+  background-image: src("assets\images\img1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+.position-absolute {
+  position: absolute;
+  top: 0;
+  background-color: mediumorchid;
+  left: 10px;
+  right: 50px;
+}
+
+.position-relative {
+  position: relative;
+  background-color: rgb(46, 86, 99);
+}
+.position-sticky {
+  position: sticky;
+  top: 75px;
+  background-color: rgb(78, 79, 43);
+}
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+.text-style {
+  color: rgb(100, 59, 98);
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+a:link {
+  color: blue;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+a:hover {
+  color: rgb(6, 6, 171);
+  text-decoration: wavy underline;
+}
+
+a:active {
+  color: rgb(6, 6, 121);
+  text-decoration: double underline;
+}
+
+a:focus {
+  color: rgb(4, 4, 81);
+  text-decoration: dotted underline;
+}
+
+a:visited {
+  color: firebrick;
+  font-style: italic;
+}
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+.calc-style {
+  width: calc(100vw - 100px);
+  background-color: chocolate;
+}
+.fixed-width-col {
+  width: 350px;
+  display: inline-block;
+}
+.fluid-col {
+  width: calc(100% - 350px);
+  display: inline-block;
+}
