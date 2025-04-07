@@ -19,6 +19,7 @@
   justify-content: flex-start;
   float: left;
   height: 100vh;
+  gap: 50px;
 }
 
 .portfolio {
@@ -31,17 +32,26 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding-top: 12px;
 }
 
-#personal .title {
+.title {
   font-weight: bold;
   font-size: 16px;
+  margin-right: 245px;
 }
 
 #personal .info {
   font-weight: bold;
   font-size: 20px;
+}
+
+#contact {
+  font-weight: bold;
+  font-size: 16px;
+}
+.style {
+  color: purple;
+  text-decoration: underline;
 }
 
 #button {
@@ -51,4 +61,18 @@
   border-radius: 4px;
   position: absolute;
   bottom: 2px;
+}
+
+#button:hover {
+  background-color: rgba(194, 62, 64, 0.9);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: square;
+  gap: 20px;
+  justify-items: start;
 }
