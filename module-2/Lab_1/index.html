@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <header>
-            <nav>
-                <a href="form.html">Forms</a>
-            </nav>
-        </header>
-        <style>
-            table,
-            th,
-            td {
-                border: 1px solid black;
-            }
-        </style>
-
         <title>My Test Page</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,8 +10,20 @@
         />
         <meta name="keywords" content="HTML, test, page" />
         <meta name="author" content="Your Name" />
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+            }
+        </style>
     </head>
     <body>
+        <header>
+            <nav>
+                <a href="form.html">Forms</a>
+            </nav>
+        </header>
         <h1>All Things Music!</h1>
         <article>
             <h2>My Favorite Instruments</h2>
@@ -95,17 +94,21 @@
                 width="250px"
                 height="300px"
             />
-            <img src = assets/html_lab_image.jpg alt="HTML Lab Image" width =
-            250px height="300px" />
+            <img
+                src="assets\html_lab_image.jpg"
+                alt="HTML Lab Image"
+                width="250px"
+                height="300px"
+            />
             <video autoplay width="250">
-                <source src="/assets/flower.webm" type="video/webm" />
+                <source src="assets\flower.webm" type="video/webm" />
                 Sorry, your browser doesn't support embedded videos.
             </video>
-            <audio autoplay src="/assets/t-rex-roar.mp3">
+            <audio autoplay src="assets\t-rex-roar.mp3">
                 Your browser does not support the <code>audio</code> element.
             </audio>
             <figcaption>Beautiful flower blooming</figcaption>
         </article>
+        <footer>Copyright &copy; 2024</footer>
     </body>
-    <footer>Copyright &copy; 2024</footer>
 </html>
