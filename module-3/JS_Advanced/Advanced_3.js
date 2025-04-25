@@ -20,9 +20,8 @@ function printMe(msg) {
   console.log(`printing debounced message: ${msg}`);
 }
 
-printMe = debounce(printMe, 1000); // Debounce with a 1000ms delay
+printMe = debounce(printMe, 1000);
 
-// Fire off 3 calls to printMe within 300ms - only the LAST one should print after 1000ms of inactivity
 setTimeout(() => printMe("Call 1"), 100);
 setTimeout(() => printMe("Call 2"), 200);
 setTimeout(() => printMe("Call 3"), 300);
