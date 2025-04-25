@@ -5,6 +5,7 @@ const sydney = {
   founded: "26 January 1788",
   timezone: "Australia/Sydney",
 };
+// Exercise B
 const melbourne = {
   name: "Melbourne",
   population: 5_078_193,
@@ -12,14 +13,13 @@ const melbourne = {
   founded: "30 August 1835",
   timezone: "Australia/Melbourne",
 };
-
-const printObject = ({ name, population, state, founded, timezone }) => {
-  console.log(`Name: ${name}`);
-  console.log(`Population: ${population}`);
-  console.log(`State: ${state}`);
-  console.log(`Founded: ${founded}`);
-  console.log(`Timezone: ${timezone}`);
+// Exercise A
+const printObjectProperties = (obj) => {
+  for (let key in obj) {
+    console.log(`${key}: ${obj[key]}`);
+  }
 };
-printObject(sydney);
+
+printObjectProperties(sydney);
 console.log("-".repeat(20));
-printObject(melbourne);
+printObjectProperties(melbourne);
