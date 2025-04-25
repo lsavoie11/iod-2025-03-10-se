@@ -16,7 +16,6 @@ console.log("Original teamSports:", teamSports);
 console.log("Original dog1:", dog1);
 console.log("Original cat1:", cat1);
 
-// e) Explanation of why the originals remain unchanged
-console.log("New moreSports:", moreSports); // ["Basketball", "Hockey", "Cricket", "Volleyball", "Football"]
-console.log("New dog2:", dog2); // "Rex"
-console.log("New cat2:", cat2); // { name: "Mittens", breed: "Siberian" }
+console.log("New moreSports:", moreSports);
+console.log("New dog2:", dog2);
+console.log("New cat2:", cat2);
