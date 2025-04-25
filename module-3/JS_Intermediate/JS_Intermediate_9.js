@@ -5,7 +5,7 @@ let salaries = {
   Christina: 75000,
   James: 43000,
 };
-
+// Exercise A
 function sumSalaries(salaries) {
   let sum = 0;
   for (let key in salaries) {
@@ -14,7 +14,7 @@ function sumSalaries(salaries) {
   return sum;
 }
 console.log(sumSalaries(salaries));
-
+// Exercise B
 function topEarner(salaries) {
   let highestSalary = -Infinity;
   let topEarnerName = "";

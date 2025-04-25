@@ -32,7 +32,7 @@ const camelCaseConditional = (cssProp) => {
 
 console.log(camelCaseConditional("padding-top"));
 console.log(camelCaseConditional("border-radius"));
-
+//Thought it would be fun to include a reduce method to convert the string to camelCase
 const camelCaseReduce = (cssProp) => {
   return cssProp
     .split("-")
