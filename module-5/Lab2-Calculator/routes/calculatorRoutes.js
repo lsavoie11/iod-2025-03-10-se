@@ -1,41 +1,22 @@
 const express = require("express");
+const calculatorController = require("../controllers/calculatorControllers.js");
 const router = express.Router();
 
 // new route for adding two numbers
 router.get("/add", (req, res) => {
-  let number1 = parseInt(req.query.num1);
-  let number2 = parseInt(req.query.num2);
-  let sum = number1 + number2;
-  console.log(sum);
-  res.status(200);
-  res.json({ result: sum });
+  calculatorController.addNumbers(req, res);
 });
 
 router.get("/subtract", (req, res) => {
-  let number1 = parseInt(req.query.num1);
-  let number2 = parseInt(req.query.num2);
-  let answer = number1 - number2;
-  console.log(answer);
-  res.status(200);
-  res.json({ result: answer });
+  calculatorController.subtractNumbers(req, res);
 });
 
 router.get("/multiply", (req, res) => {
-  let number1 = parseInt(req.query.num1);
-  let number2 = parseInt(req.query.num2);
-  let answer = number1 * number2;
-  console.log(answer);
-  res.status(200);
-  res.json({ result: answer });
+  calculatorController.multiplyNumbers(req, res);
 });
 
 router.get("/divide", (req, res) => {
-  let number1 = parseInt(req.query.num1);
-  let number2 = parseInt(req.query.num2);
-  let answer = number1 / number2;
-  console.log(answer);
-  res.status(200);
-  res.json({ result: answer });
+  calculatorController.divideNumbers(req, res);
 });
 
 module.exports = router;
