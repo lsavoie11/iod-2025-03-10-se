@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useMood } from "./MoodContext";
 
-const currencies = ["USD", "AUD", "NZD", "GBP", "EUR", "SGD"];
-
-function BitcoinRates() {
-  const [currency, setCurrency] = useState(currencies[0]);
+// Custom hook for fetching Bitcoin rate
+function useBitcoinRate(currency) {
   const [rate, setRate] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    let isMounted = true; // for cleanup
+  React.useEffect(() => {
+    let isMounted = true;
     setLoading(true);
     setError(null);
 
@@ -23,7 +22,7 @@ function BitcoinRates() {
           setLoading(false);
         }
       })
-      .catch((err) => {
+      .catch(() => {
         if (isMounted) {
           setError("Failed to fetch rate");
           setLoading(false);
@@ -35,19 +34,27 @@ function BitcoinRates() {
     };
   }, [currency]);
 
-  const options = currencies.map((curr) => (
-    <option value={curr} key={curr}>
-      {curr}
-    </option>
-  ));
+  return { rate, loading, error };
+}
+
+const currencies = ["USD", "AUD", "NZD", "GBP", "EUR", "SGD"];
+
+function BitcoinRates() {
+  const [currency, setCurrency] = useState(currencies[0]);
+  const { rate, loading, error } = useBitcoinRate(currency);
+  const { happy } = useMood();
 
   return (
     <div className="BitcoinRates componentBox">
-      <h3>Bitcoin Exchange Rate</h3>
+      <h3>Bitcoin Exchange Rate {happy ? "😊" : "😢"}</h3>
       <label>
         Choose currency:
         <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
-          {options}
+          {currencies.map((curr) => (
+            <option value={curr} key={curr}>
+              {curr}
+            </option>
+          ))}
         </select>
       </label>
       <div style={{ marginTop: "1em" }}>
