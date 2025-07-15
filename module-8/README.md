@@ -1,7 +1,7 @@
 <pre>
-```js
-// This is a JavaScript code block
-console.log("Hello, world!");
+```
+//
+console.log("test");
 ```
 </pre>
 
