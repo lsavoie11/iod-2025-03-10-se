@@ -19,7 +19,7 @@ console.log("test");
 ![MongoDBshell1](screenshots/MongoDB1.png)
 ![MongoDBshell2](screenshots/MongoDB2.png)
 ![MongoDBshell3](screenshots/MongoDB3.png)
-![MongoDBshell4](screenshots/MongoDB4.png)
+![MongoDBshell4](screenshots/MongoDb4.png)
 ![MongoDBshell5](screenshots/MongoDB5.png)
 ![MongoDBshell6](screenshots/MongoDB6.png)
 ![MongoDBshell7](screenshots/MongoDB7.png)
