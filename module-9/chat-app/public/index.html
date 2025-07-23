@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Socket.IO Chat</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      #chat {
+        height: 200px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+      #users {
+        font-size: 0.9em;
+        color: green;
+      }
+      #typing {
+        font-style: italic;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Socket.IO Chat</h2>
+    <div>
+      Nickname: <input id="nickname" autocomplete="off" />
+      <button onclick="setNickname()">Join</button>
+    </div>
+    <div id="users">Online:</div>
+    <div id="chat"></div>
+    <div id="typing"></div>
+    <form id="form" style="display: none">
+      <input id="input" autocomplete="off" /><button>Send</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
